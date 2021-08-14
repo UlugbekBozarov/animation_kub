@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .cub {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: rotateX(0deg) rotate(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotate(360deg);
+    }
+}
+
+.container .cub span {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    z-index: 0;
+    transform-style: preserve-3d;
+}
+
+.container .cub span:nth-child(1):before,
+.container .cub span:nth-child(2):before,
+.container .cub span:nth-child(3):before,
+.container .cub span:nth-child(4):before,
+.container .cub span:nth-child(5):before,
+.container .cub span:nth-child(6):before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    transform: rotateX(180deg) translateZ(199.9px);
+    background: rgb(221, 219, 219);
+}
+
+
+.container .cub span:nth-child(1) {
+    transform: translate(-50%, -50%) rotateX(0deg) translateZ(100px);
+    background: slateblue;
+    color: #fff;
+    transform-style: preserve-3d;
+}
+
+.container .cub span:nth-child(2) {
+    background: yellowgreen;
+    color: #222;
+    transform: translate(-50%, -50%) rotateX(90deg) translateZ(100px);
+}
+
+.container .cub span:nth-child(3) {
+    background: cyan;
+    color: #222;
+    transform: translate(-50%, -50%) rotateX(180deg) translateZ(100px);
+}
+
+.container .cub span:nth-child(4) {
+    background: darkblue;
+    color: #fff;
+    transform: translate(-50%, -50%) rotateX(270deg) translateZ(100px);
+}
+
+.container .cub span:nth-child(5) {
+    top: -100px;
+    background: darkred;
+    color: #222;
+    transform: rotateY(90deg);
+}
+
+.container .cub span:nth-child(6) {
+    top: -100px;
+    left: -200px;
+    background: orange;
+    color: #fff;
+    transform: rotateY(270deg)
+}
+
+.container .cub span:nth-child(7) {
+    width: 199px;
+    height: 199px;
+    top: -99.5px;
+    left: -99.5px;
+    border-radius: 0;
+    background: rgb(221, 219, 219);
+    color: #fff;
+    transform: rotateY(270deg)
+}
+
+.container .cub span:nth-child(8) {
+    width: 199px;
+    height: 199px;
+    top: -99.5px;
+    left: -99.5px;
+    border-radius: 0;
+    background-color: rgb(221, 219, 219);
+    color: #fff;
+    transform: rotateY(180deg)
+}
+.container .cub span:nth-child(9) {
+    width: 199px;
+    height: 199px;
+    top: -99.5px;
+    left: -99.5px;
+    border-radius: 0;
+    background: rgb(221, 219, 219);
+    transform: rotateX(90deg);
+    color: #000;
+}
